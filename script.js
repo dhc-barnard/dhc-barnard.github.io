@@ -23,4 +23,4 @@ for(ii=0; ii<pics.length; ii++) {
   ahref += '<a href="'+url[ii]+'"'+img+'</a>'
 }
 
-// document.getElementById('area').innerHTML = ahref;
+document.getElementById('area').innerHTML = ahref;
