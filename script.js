@@ -19,8 +19,8 @@ for(ii=0; ii<pics.length; ii++) {
   positionright = Math.random()*0;
   zindex = ii;
 
-  img += '<img src="'+pics[ii]+'" style="top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+zindex+';">';
+  img += '<img src="'+pics[ii]+'" style="width: 25%; top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+zindex+';">';
   ahref += '<a href="'+url[ii]+'"'+img+'</a>'
 }
 
-document.getElementById('area').innerHTML = ahref;
+// document.getElementById('area').innerHTML = ahref;
