@@ -13,4 +13,4 @@ for(ii=0; ii<pics.length; ii++) {
   img += '<img src="'+pics[ii]+'" style="top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+zindex+';">';
 }
 
-document.getElementByID('area').innerHTML = img;
+document.getElementById('area').innerHTML = img;
