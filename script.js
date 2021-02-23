@@ -30,7 +30,7 @@ if (action === 'decimal') {
   console.log('decimal key!')
 }
 
-if (action ==== 'clear') {
+if (action === 'clear') {
   console.log('clear key!')
 }
 
