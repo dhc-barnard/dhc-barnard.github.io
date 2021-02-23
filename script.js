@@ -1,26 +1,39 @@
-// var pics = ["blob.svg",
-//     "blob1.svg",
-//     "blob2.svg",
-//     "blob3.svg",
-//   ];
-//
-// var url = ["room.html",
-//     "room1.html",
-//     "room2.html",
-//     "room3.html",
-//   ];
-//
-// var ahref = '';
-//
-// var img = '';
-//
-// for(ii=0; ii<pics.length; ii++) {
-//   positiontop = Math.random()*500;
-//   positionright = Math.random()*0;
-//   zindex = ii;
-//
-//   img += '<img src="'+pics[ii]+'" style="width: 25%; top: '+positiontop+'px;'+'right: '+positionright+'px;'+'z-index: '+zindex+';">';
-//   ahref += '<a href="'+url[ii]+'"'+img+'</a>'
-// }
-//
-// document.getElementById('area').innerHTML = ahref;
+// calculator attempt
+// following https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
+
+const calculator = document.querySelector('.calculator')
+const keys = calculator.querySelector('.calculator__keys')
+
+keys.addEventListener('click', e => {
+  if (e.target.matches('button')) {
+    // Do something
+  }
+})
+
+const key = e.target
+const action = key.dataset.action
+
+if (!action) {
+  console.log('number key!')
+}
+
+if (
+  action === 'add' ||
+  action === 'subtract' ||
+  action === 'multiply' ||
+  action === 'divide'
+) {
+  console.log('operator key!')
+}
+
+if (action === 'decimal') {
+  console.log('decimal key!')
+}
+
+if (action ==== 'clear') {
+  console.log('clear key!')
+}
+
+if (action === 'calculate') {
+  console.log('equal key!')
+}
