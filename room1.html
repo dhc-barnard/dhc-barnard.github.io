@@ -12,12 +12,17 @@
         Welcome to the Reducing Your Digital Carbon Footprint Calculator Room!
       </p>
       <div class="footprint-calculator">
-        <div class="footprint-calculator__display-carbon">0.00 kilograms</div>
-        <div class="footprint-calculator__display-water">0.00 liters</div>
-        <div class="footprint-calculator__display-land">0.00 cm2</div>
+        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Carbon Footprint:</div>
+        <div style="float:right;" class="footprint-calculator__display-carbon">0.00 kilograms</div>
+        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Water Footprint:</div>
+        <div style="float:right;" class="footprint-calculator__display-water">0.00 liters</div>
+        <div style="float:left;" class="footprint-calculator__display-carbon"></div>
+        <div style="float:right;" class="footprint-calculator__display-land">0.00 cm2</div>
         <div class="footprint-calculator__keys">
           <label for="Netflix">Netflix:</label>
-          <input type="number" id="Netflix" name="Netflix">
+          <input type="number" id="Netflix" name="Netflix" step="0.5">
+          <label for="Hulu">Hulu:</label>
+          <input type="number" id="Hulu" name="Hulu" step="0.5">
         </div>
       </div>
     </div>
