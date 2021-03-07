@@ -11,21 +11,36 @@
       <p>
         Welcome to the Reducing Your Digital Carbon Footprint Calculator Room!
       </p>
-      <div class="footprint-calculator">
-        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Carbon Footprint: </div>
-        <div style="float:left;" class="footprint-calculator__display-carbon">0.00 kilograms</div></br>
-        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Water Footprint: </div>
+
+      <form id="calc" oninput="updateOutput()">
+      Digital Carbon Footprint: <output name="carbon" for="Netflix Hulu">0</output> g</br></br>
+      Digital Water Footprint: <output name="water" for="Netflix Hulu">0</output> l</br></br>
+      Digital Land Footprint: <output name="land" for="Netflix Hulu">0</output> cm<sup>2</sup></br></br>
+      <div class="platform_name">Netflix: </div>
+      <input name ="Netflix" value="0" type="number" min="0" step="0.5"></br>
+      <div class="platform_name">Hulu: </div>
+      <input name ="Hulu" value="0" type="number" min="0" step="0.5">
+      </form>
+
+<script type="text/javascript" src="script2.js" defer></script>
+</body>
+</html>
+
+      <!-- <div class="footprint-calculator">
+        <div style="float:left;" class="footprint-calculator__carbon">Digital Carbon Footprint: </div>
+        <output name="carbon" for="Netflix Hulu">0</output>
+        <div style="float:left;" class="footprint-calculator__water">Digital Water Footprint: </div>
         <div style="float:left;" class="footprint-calculator__display-water">0.00 liters</div></br>
-        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Land Footprint: </div>
+        <div style="float:left;" class="footprint-calculator__land">Digital Land Footprint: </div>
         <div style="float:left;" class="footprint-calculator__display-land">0.00 cm2</div></br>
         <div class="footprint-calculator__keys">
           <label for="Netflix">Netflix:</label>
-          <input type="number" id="Netflix" name="Netflix" step="0.5">
+          <input type="number" id="Netflix" name="Netflix" step="0.5" min="0">
           <label for="Hulu">Hulu:</label>
-          <input type="number" id="Hulu" name="Hulu" step="0.5">
+          <input type="number" id="Hulu" name="Hulu" step="0.5" min="0">
         </div>
       </div>
     </div>
   <script type="text/javascript" src="script.js" defer></script>
 </body>
-</html>
+</html> -->
