@@ -13,13 +13,52 @@
       </p>
 
       <form id="calc" oninput="updateOutput()">
-      Digital Carbon Footprint: <output name="carbon" for="Netflix Hulu">0</output> g</br></br>
+      Digital Carbon Footprint: <output name="carbon" for="Netflix Hulu">0</output> kg</br></br>
       Digital Water Footprint: <output name="water" for="Netflix Hulu">0</output> l</br></br>
       Digital Land Footprint: <output name="land" for="Netflix Hulu">0</output> cm<sup>2</sup></br></br>
-      <div class="platform_name">Netflix: </div>
-      <input name ="Netflix" value="0" type="number" min="0" step="0.5"></br>
-      <div class="platform_name">Hulu: </div>
-      <input name ="Hulu" value="0" type="number" min="0" step="0.5">
+
+      <table>
+        <tr>
+          <th>Platform</th>
+          <th>Data (GB/hr)</th>
+          <th>Hours/day</th>
+          <th>Carbon (g)</th>
+          <th>Water (l)</th>
+          <th>Land (cm<sup>2</sup>)</th>
+        </tr>
+       <tr>
+          <td><div class="platform_name">Netflix: </div></td>
+          <td>7</td>
+          <td><input name ="Netflix" value="0" type="number" min="0" step="0.5"></td>
+          <td><output name="carbon_netflix" for="Netflix">0</output></td>
+          <td><output name="water_netflix" for="Netflix">0</output></td>
+          <td><output name="land_netflix" for="Netflix">0</output></td>
+        </tr>
+        <tr>
+           <td><div class="platform_name">Hulu: </div></td>
+           <td>7.2</td>
+           <td><input name ="Hulu" value="0" type="number" min="0" step="0.5"></td>
+           <td><output name="carbon_hulu" for="Hulu">0</output></td>
+           <td><output name="water_hulu" for="Hulu">0</output></td>
+           <td><output name="land_hulu" for="Hulu">0</output></td>
+         </tr>
+         <tr>
+            <td><div class="platform_name">Amazon Video: </div></td>
+            <td>7</td>
+            <td><input name ="Amazon" value="0" type="number" min="0" step="0.5"></td>
+            <td><output name="carbon_amazon" for="Amazon">0</output></td>
+            <td><output name="water_amazon" for="Amazon">0</output></td>
+            <td><output name="land_amazon" for="Amazon">0</output></td>
+          </tr>
+          <tr>
+             <td><div class="platform_name">Youtube: </div></td>
+             <td>15.98</td>
+             <td><input name ="Youtube" value="0" type="number" min="0" step="0.5"></td>
+             <td><output name="carbon_youtube" for="Youtube">0</output></td>
+             <td><output name="water_youtube" for="Youtube">0</output></td>
+             <td><output name="land_youtube" for="Youtube">0</output></td>
+           </tr>
+      </table>
       </form>
 
 <script type="text/javascript" src="script2.js" defer></script>
