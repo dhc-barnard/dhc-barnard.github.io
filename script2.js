@@ -107,6 +107,43 @@ function updateOutput() {
   var out_water_websurfing = form.elements["water_websurfing"];
   var out_land_websurfing = form.elements["land_websurfing"];
 
+  // storage values
+  // google(personal)
+  var out_carbon_googlepersonal = form.elements["carbon_google(personal)"];
+  var out_water_googlepersonal = form.elements["water_google(personal)"];
+  var out_land_googlepersonal = form.elements["land_google(personal)"];
+
+  // google(work)
+  var out_carbon_googlework = form.elements["carbon_google(work)"];
+  var out_water_googlework = form.elements["water_google(work)"];
+  var out_land_googlework = form.elements["land_google(work)"];
+
+  // hotmail
+  var out_carbon_hotmail = form.elements["carbon_hotmail"];
+  var out_water_hotmail = form.elements["water_hotmail"];
+  var out_land_hotmail = form.elements["land_hotmail"];
+
+  // yahoo
+  var out_carbon_yahoo = form.elements["carbon_yahoo"];
+  var out_water_yahoo = form.elements["water_yahoo"];
+  var out_land_yahoo = form.elements["land_yahoo"];
+
+  // dropbox
+  var out_carbon_dropbox = form.elements["carbon_dropbox"];
+  var out_water_dropbox = form.elements["water_dropbox"];
+  var out_land_dropbox = form.elements["land_dropbox"];
+
+  // box
+  var out_carbon_box = form.elements["carbon_box"];
+  var out_water_box = form.elements["water_box"];
+  var out_land_box = form.elements["land_box"];
+
+  // other
+  var out_carbon_other = form.elements["carbon_other"];
+  var out_water_other = form.elements["water_other"];
+  var out_land_other = form.elements["land_other"];
+
+
   // replace all instances of parseFloat with parseInt if needing to force integers
   var num1 = parseFloat(form.elements["Netflix"].value);
   var num2 = parseFloat(form.elements["Hulu"].value);
@@ -128,6 +165,15 @@ function updateOutput() {
   var num18 = parseFloat(form.elements["WeChat"].value);
   var num19 = parseFloat(form.elements["OnlineGaming"].value);
   var num20 = parseFloat(form.elements["WebSurfing"].value);
+
+  // replace all instances of parseFloat with parseInt if needing to force integers
+  var num21 = parseFloat(form.elements["google(personal)"].value);
+  var num22 = parseFloat(form.elements["google(work)"].value);
+  var num23 = parseFloat(form.elements["hotmail"].value);
+  var num24 = parseFloat(form.elements["yahoo"].value);
+  var num25 = parseFloat(form.elements["dropbox"].value);
+  var num26 = parseFloat(form.elements["box"].value);
+  var num27 = parseFloat(form.elements["other"].value);
 
   // get platform values
   out_carbon_netflix.value = num1*440.565004;
@@ -210,6 +256,35 @@ function updateOutput() {
   out_water_websurfing.value = num20*5.248541901;
   out_land_websurfing.value = num20*2.997391397;
 
+  // get storage values
+  out_carbon_googlepersonal.value = num21*62.93785771;
+  out_water_googlepersonal.value = num21*35;
+  out_land_googlepersonal.value = num21*20;
+
+  out_carbon_googlework.value = num22*62.93785771;
+  out_water_googlework.value = num22*35;
+  out_land_googlework.value = num22*20;
+
+  out_carbon_hotmail.value = num23*62.93785771;
+  out_water_hotmail.value = num23*35;
+  out_land_hotmail.value = num23*20;
+
+  out_carbon_yahoo.value = num24*62.93785771;
+  out_water_yahoo.value = num24*35;
+  out_land_yahoo.value = num24*20;
+
+  out_carbon_dropbox.value = num25*62.93785771;
+  out_water_dropbox.value = num25*35;
+  out_land_dropbox.value = num25*20;
+
+  out_carbon_box.value = num26*62.93785771;
+  out_water_box.value = num26*35;
+  out_land_box.value = num26*20;
+
+  out_carbon_other.value = num27*62.93785771;
+  out_water_other.value = num27*35;
+  out_land_other.value = num27*20;
+
   // final outputs
   out_carbon.value = (parseFloat(out_carbon_netflix.value*0.001) + parseFloat(out_carbon_hulu.value*0.001)
   + parseFloat(out_carbon_amazon.value*0.001) + parseFloat(out_carbon_youtube.value*0.001)
@@ -221,7 +296,11 @@ function updateOutput() {
   + parseFloat(out_carbon_instagram.value*0.001) + parseFloat(out_carbon_snapchat.value*0.001)
   + parseFloat(out_carbon_tiktok.value*0.001) + parseFloat(out_carbon_whatsapp.value*0.001)
   + parseFloat(out_carbon_wechat.value*0.001) + parseFloat(out_carbon_onlinegaming.value*0.001)
-  + parseFloat(out_carbon_websurfing.value*0.001)).toFixed(2);
+  + parseFloat(out_carbon_websurfing.value*0.001)
+  + parseFloat(out_carbon_googlepersonal.value*0.001) + parseFloat(out_carbon_googlework.value*0.001)
+  + parseFloat(out_carbon_hotmail.value*0.001) + parseFloat(out_carbon_yahoo.value*0.001)
+  + parseFloat(out_carbon_dropbox.value*0.001) + parseFloat(out_carbon_box.value*0.001)
+  + parseFloat(out_carbon_other.value*0.001)).toFixed(2);
   out_water.value = (parseFloat(out_water_netflix.value) + parseFloat(out_water_hulu.value)
   + parseFloat(out_water_amazon.value) + parseFloat(out_water_youtube.value)
   + parseFloat(out_water_spotify.value) + parseFloat(out_water_skype.value)
@@ -231,7 +310,11 @@ function updateOutput() {
   + parseFloat(out_water_twitter.value) + parseFloat(out_water_instagram.value)
   + parseFloat(out_water_snapchat.value) + parseFloat(out_water_tiktok.value)
   + parseFloat(out_water_whatsapp.value) + parseFloat(out_water_wechat.value)
-  + parseFloat(out_water_onlinegaming.value) + parseFloat(out_water_websurfing.value)).toFixed(2);
+  + parseFloat(out_water_onlinegaming.value) + parseFloat(out_water_websurfing.value)
+  + parseFloat(out_water_googlepersonal.value) + parseFloat(out_water_googlework.value)
+  + parseFloat(out_water_hotmail.value) + parseFloat(out_water_yahoo.value)
+  + parseFloat(out_water_dropbox.value) + parseFloat(out_water_box.value)
+  + parseFloat(out_water_other.value)).toFixed(2);
   out_land.value = (parseFloat(out_land_netflix.value) + parseFloat(out_land_hulu.value)
   + parseFloat(out_land_amazon.value) + parseFloat(out_land_youtube.value)
   + parseFloat(out_land_spotify.value) + parseFloat(out_land_skype.value)
@@ -241,5 +324,9 @@ function updateOutput() {
   + parseFloat(out_land_twitter.value) + parseFloat(out_land_instagram.value)
   + parseFloat(out_land_snapchat.value) + parseFloat(out_land_tiktok.value)
   + parseFloat(out_land_whatsapp.value) + parseFloat(out_land_wechat.value)
-  + parseFloat(out_land_onlinegaming.value) + parseFloat(out_land_websurfing.value)).toFixed(2);
+  + parseFloat(out_land_onlinegaming.value) + parseFloat(out_land_websurfing.value)
+  + parseFloat(out_land_googlepersonal.value) + parseFloat(out_land_googlework.value)
+  + parseFloat(out_land_hotmail.value) + parseFloat(out_land_yahoo.value)
+  + parseFloat(out_land_dropbox.value) + parseFloat(out_land_box.value)
+  + parseFloat(out_land_other.value)).toFixed(2);
 }
