@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>forest</title>
-    <style>
-      body {
-        background-image: url('forest_unsplash.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
-    </style>
-  </head>
 
-  <body>
-    <p style="color:white; font-family:verdana;">
-      Welcome to the Barnard DHC
-    </p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>forest</title>
+  <style>
+    body {
+      background: rgb(204, 204, 255);
+      background: radial-gradient(circle, rgba(204, 204, 255, 1) 0%, rgba(134, 94, 156, 1) 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <p style="color:white; font-family:verdana;">
+    Welcome to the Barnard DHC
+  </p>
+  <div id="calculator" class="room">
     <p><a href="room.html">
-      <img src="blob.svg" alt="blob" width="200">
-    </a></p>
-    <p><a href="room1.html">
-      <img src="blob1.svg" alt="blob" width="200">
-    </a></p>
-    <p><a href="room2.html">
-      <img src="blob2.svg" alt="blob" width="200">
-    </a></p>
-    <p><a href="room3.html">
-      <img src="blob3.svg" alt="blob" width="200">
-    </a></p>
+        <img src="blob.svg" alt="blob" width="200">
+      </a></p>
+  </div>
+  <div>
+    <p><a href="room1.html" class="room">
+        <img src="blob1.svg" alt="blob" width="200">
+      </a></p>
+  </div>
+  <div>
+    <p><a href="room2.html" class="room">
+        <img src="blob2.svg" alt="blob" width="200">
+      </a></p>
+  </div>
+  <div>
+    <p><a href="room3.html" class="room">
+        <img src="blob3.svg" alt="blob" width="200">
+      </a></p>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
