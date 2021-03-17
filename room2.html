@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html><head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="calculator.css"> -->
     <title>footprint calculator</title>
@@ -11,21 +10,249 @@
       <p>
         Welcome to the Reducing Your Digital Carbon Footprint Calculator Room!
       </p>
-      <div class="footprint-calculator">
-        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Carbon Footprint: </div>
-        <div style="float:left;" class="footprint-calculator__display-carbon">0.00 kilograms</div></br>
-        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Water Footprint: </div>
-        <div style="float:left;" class="footprint-calculator__display-water">0.00 liters</div></br>
-        <div style="float:left;" class="footprint-calculator__display-carbon">Digital Land Footprint: </div>
-        <div style="float:left;" class="footprint-calculator__display-land">0.00 cm2</div></br>
-        <div class="footprint-calculator__keys">
-          <label for="Netflix">Netflix:</label>
-          <input type="number" id="Netflix" name="Netflix" step="0.5">
-          <label for="Hulu">Hulu:</label>
-          <input type="number" id="Hulu" name="Hulu" step="0.5">
-        </div>
-      </div>
-    </div>
-  <script type="text/javascript" src="script.js" defer></script>
-</body>
-</html>
+
+      <form id="calc" oninput="updateOutput()">
+      Digital Carbon Footprint: <output name="carbon" for="Netflix Hulu">0</output> kg<br><br>
+      Digital Water Footprint: <output name="water" for="Netflix Hulu">0</output> l<br><br>
+      Digital Land Footprint: <output name="land" for="Netflix Hulu">0</output> cm<sup>2</sup><br><br>
+
+      <table>
+        <tbody><tr>
+          <th>Platform</th>
+          <th>Data (GB/hr)</th>
+          <th>Hours/day</th>
+          <th>Carbon (g)</th>
+          <th>Water (l)</th>
+          <th>Land (cm<sup>2</sup>)</th>
+        </tr>
+       <tr>
+          <td><div class="platform_name">Netflix: </div></td>
+          <td>7</td>
+          <td><input name="Netflix" value="0" type="number" min="0" step="0.5"></td>
+          <td><output name="carbon_netflix" for="Netflix">0</output></td>
+          <td><output name="water_netflix" for="Netflix">0</output></td>
+          <td><output name="land_netflix" for="Netflix">0</output></td>
+        </tr>
+        <tr>
+           <td><div class="platform_name">Hulu: </div></td>
+           <td>7.2</td>
+           <td><input name="Hulu" value="0" type="number" min="0" step="0.5"></td>
+           <td><output name="carbon_hulu" for="Hulu">0</output></td>
+           <td><output name="water_hulu" for="Hulu">0</output></td>
+           <td><output name="land_hulu" for="Hulu">0</output></td>
+         </tr>
+         <tr>
+            <td><div class="platform_name">Amazon Video: </div></td>
+            <td>7</td>
+            <td><input name="Amazon" value="0" type="number" min="0" step="0.5"></td>
+            <td><output name="carbon_amazon" for="Amazon">0</output></td>
+            <td><output name="water_amazon" for="Amazon">0</output></td>
+            <td><output name="land_amazon" for="Amazon">0</output></td>
+          </tr>
+          <tr>
+             <td><div class="platform_name">Youtube: </div></td>
+             <td>15.98</td>
+             <td><input name="Youtube" value="0" type="number" min="0" step="0.5"></td>
+             <td><output name="carbon_youtube" for="Youtube">0</output></td>
+             <td><output name="water_youtube" for="Youtube">0</output></td>
+             <td><output name="land_youtube" for="Youtube">0</output></td>
+           </tr>
+           <tr>
+              <td><div class="platform_name">Spotify: </div></td>
+              <td>0.04</td>
+              <td><input name="Spotify" value="0" type="number" min="0" step="0.5"></td>
+              <td><output name="carbon_spotify" for="Spotify">0</output></td>
+              <td><output name="water_spotify" for="Spotify">0</output></td>
+              <td><output name="land_spotify" for="Spotify">0</output></td>
+            </tr>
+            <tr>
+               <td><div class="platform_name">Skype: </div></td>
+               <td>1.86</td>
+               <td><input name="Skype" value="0" type="number" min="0" step="0.5"></td>
+               <td><output name="carbon_skype" for="Skype">0</output></td>
+               <td><output name="water_skype" for="Skype">0</output></td>
+               <td><output name="land_skype" for="Skype">0</output></td>
+             </tr>
+             <tr>
+                <td><div class="platform_name">Zoom: </div></td>
+                <td>2.5</td>
+                <td><input name="Zoom" value="0" type="number" min="0" step="0.5"></td>
+                <td><output name="carbon_zoom" for="Zoom">0</output></td>
+                <td><output name="water_zoom" for="Zoom">0</output></td>
+                <td><output name="land_zoom" for="Zoom">0</output></td>
+              </tr>
+              <tr>
+                 <td><div class="platform_name">Webex: </div></td>
+                 <td>2.58</td>
+                 <td><input name="Webex" value="0" type="number" min="0" step="0.5"></td>
+                 <td><output name="carbon_webex" for="Webex">0</output></td>
+                 <td><output name="water_webex" for="Webex">0</output></td>
+                 <td><output name="land_webex" for="Webex">0</output></td>
+               </tr>
+               <tr>
+                  <td><div class="platform_name">FaceTime: </div></td>
+                  <td>0.18</td>
+                  <td><input name="FaceTime" value="0" type="number" min="0" step="0.5"></td>
+                  <td><output name="carbon_facetime" for="FaceTime">0</output></td>
+                  <td><output name="water_facetime" for="FaceTime">0</output></td>
+                  <td><output name="land_facetime" for="FaceTime">0</output></td>
+                </tr>
+                <tr>
+                   <td><div class="platform_name">Google Hangout: </div></td>
+                   <td>3.24</td>
+                   <td><input name="GoogleHangout" value="0" type="number" min="0" step="0.5"></td>
+                   <td><output name="carbon_googlehangout" for="GoogleHangout">0</output></td>
+                   <td><output name="water_googlehangout" for="GoogleHangout">0</output></td>
+                   <td><output name="land_googlehangout" for="GoogleHangout">0</output></td>
+                 </tr>
+                 <tr>
+                    <td><div class="platform_name">Google Duo: </div></td>
+                    <td>0.48</td>
+                    <td><input name="GoogleDuo" value="0" type="number" min="0" step="0.5"></td>
+                    <td><output name="carbon_googleduo" for="GoogleDuo">0</output></td>
+                    <td><output name="water_googleduo" for="GoogleDuo">0</output></td>
+                    <td><output name="land_googleduo" for="GoogleDuo">0</output></td>
+                  </tr>
+                  <tr>
+                     <td><div class="platform_name">Facebook: </div></td>
+                     <td>0.16</td>
+                     <td><input name="Facebook" value="0" type="number" min="0" step="0.5"></td>
+                     <td><output name="carbon_facebook" for="Facebook">0</output></td>
+                     <td><output name="water_facebook" for="Facebook">0</output></td>
+                     <td><output name="land_facebook" for="Facebook">0</output></td>
+                   </tr>
+                   <tr>
+                      <td><div class="platform_name">Twitter: </div></td>
+                      <td>0.36</td>
+                      <td><input name="Twitter" value="0" type="number" min="0" step="0.5"></td>
+                      <td><output name="carbon_twitter" for="Twitter">0</output></td>
+                      <td><output name="water_twitter" for="Twitter">0</output></td>
+                      <td><output name="land_twitter" for="Twitter">0</output></td>
+                    </tr>
+                    <tr>
+                       <td><div class="platform_name">Instagram: </div></td>
+                       <td>0.1</td>
+                       <td><input name="Instagram" value="0" type="number" min="0" step="0.5"></td>
+                       <td><output name="carbon_instagram" for="Instagram">0</output></td>
+                       <td><output name="water_instagram" for="Instagram">0</output></td>
+                       <td><output name="land_instagram" for="Instagram">0</output></td>
+                     </tr>
+                     <tr>
+                        <td><div class="platform_name">Snapchat: </div></td>
+                        <td>0.16</td>
+                        <td><input name="Snapchat" value="0" type="number" min="0" step="0.5"></td>
+                        <td><output name="carbon_snapchat" for="Snapchat">0</output></td>
+                        <td><output name="water_snapchat" for="Snapchat">0</output></td>
+                        <td><output name="land_snapchat" for="Snapchat">0</output></td>
+                      </tr>
+                      <tr>
+                         <td><div class="platform_name">TikTok: </div></td>
+                         <td>1.4</td>
+                         <td><input name="TikTok" value="0" type="number" min="0" step="0.5"></td>
+                         <td><output name="carbon_tiktok" for="TikTok">0</output></td>
+                         <td><output name="water_tiktok" for="TikTok">0</output></td>
+                         <td><output name="land_tiktok" for="TikTok">0</output></td>
+                       </tr>
+                       <tr>
+                          <td><div class="platform_name">WhatsApp: </div></td>
+                          <td>0.4</td>
+                          <td><input name="WhatsApp" value="0" type="number" min="0" step="0.5"></td>
+                          <td><output name="carbon_whatsapp" for="WhatsApp">0</output></td>
+                          <td><output name="water_whatsapp" for="WhatsApp">0</output></td>
+                          <td><output name="land_whatsapp" for="WhatsApp">0</output></td>
+                        </tr>
+                        <tr>
+                           <td><div class="platform_name">WeChat: </div></td>
+                           <td>0.11</td>
+                           <td><input name="WeChat" value="0" type="number" min="0" step="0.5"></td>
+                           <td><output name="carbon_wechat" for="WeChat">0</output></td>
+                           <td><output name="water_wechat" for="WeChat">0</output></td>
+                           <td><output name="land_wechat" for="WeChat">0</output></td>
+                         </tr>
+                         <tr>
+                            <td><div class="platform_name">Online Gaming: </div></td>
+                            <td>0.3</td>
+                            <td><input name="OnlineGaming" value="0" type="number" min="0" step="0.5"></td>
+                            <td><output name="carbon_onlinegaming" for="OnlineGaming">0</output></td>
+                            <td><output name="water_onlinegaming" for="OnlineGaming">0</output></td>
+                            <td><output name="land_onlinegaming" for="OnlineGaming">0</output></td>
+                          </tr>
+                          <tr>
+                             <td><div class="platform_name">Web Surfing: </div></td>
+                             <td>0.15</td>
+                             <td><input name="WebSurfing" value="0" type="number" min="0" step="0.5"></td>
+                             <td><output name="carbon_websurfing" for="WebSurfing">0</output></td>
+                             <td><output name="water_websurfing" for="WebSurfing">0</output></td>
+                             <td><output name="land_websurfing" for="WebSurfing">0</output></td>
+                           </tr>
+      </tbody></table>
+    <br>
+  <br>
+  <table>
+    <tbody><tr>
+      <th>Source</th>
+      <th>Data (GB)</th>
+      <th>Carbon (g)</th>
+      <th>Water (l)</th>
+      <th>Land (cm<sup>2</sup>)</th>
+    </tr>
+   <tr>
+      <td><div class="source">Google (personal): </div></td>
+      <td><input name="google(personal)" value="0" type="number" min="0" step="0.5"></td>
+      <td><output name="carbon_google(personal)" for="google(personal)">0</output></td>
+      <td><output name="water_google(personal)" for="google(personal)">0</output></td>
+      <td><output name="land_google(personal)" for="google(personal)">0</output></td>
+    </tr>
+    <tr>
+       <td><div class="source">Google (work): </div></td>
+       <td><input name="google(work)" value="0" type="number" min="0" step="0.5"></td>
+       <td><output name="carbon_google(work)" for="google(work)">0</output></td>
+       <td><output name="water_google(work)" for="google(work)">0</output></td>
+       <td><output name="land_google(work)" for="google(work)">0</output></td>
+     </tr>
+     <tr>
+        <td><div class="source">Hotmail: </div></td>
+        <td><input name="hotmail" value="0" type="number" min="0" step="0.5"></td>
+        <td><output name="carbon_hotmail" for="hotmail">0</output></td>
+        <td><output name="water_hotmail" for="hotmail">0</output></td>
+        <td><output name="land_hotmail" for="hotmail">0</output></td>
+      </tr>
+      <tr>
+         <td><div class="source">Yahoo mail: </div></td>
+         <td><input name="yahoo" value="0" type="number" min="0" step="0.5"></td>
+         <td><output name="carbon_yahoo" for="yahoo">0</output></td>
+         <td><output name="water_yahoo" for="yahoo">0</output></td>
+         <td><output name="land_yahoo" for="yahoo">0</output></td>
+       </tr>
+       <tr>
+          <td><div class="source">Dropbox: </div></td>
+          <td><input name="dropbox" value="0" type="number" min="0" step="0.5"></td>
+          <td><output name="carbon_dropbox" for="dropbox">0</output></td>
+          <td><output name="water_dropbox" for="dropbox">0</output></td>
+          <td><output name="land_dropbox" for="dropbox">0</output></td>
+        </tr>
+        <tr>
+           <td><div class="source">Box: </div></td>
+           <td><input name="box" value="0" type="number" min="0" step="0.5"></td>
+           <td><output name="carbon_box" for="box">0</output></td>
+           <td><output name="water_box" for="box">0</output></td>
+           <td><output name="land_box" for="box">0</output></td>
+         </tr>
+         <tr>
+            <td><div class="source">Other: </div></td>
+            <td><input name="other" value="0" type="number" min="0" step="0.5"></td>
+            <td><output name="carbon_other" for="other">0</output></td>
+            <td><output name="water_other" for="other">0</output></td>
+            <td><output name="land_other" for="other">0</output></td>
+          </tr>
+  </tbody></table>
+      </form>
+<br>
+<br>
+Put Results in Perspective:
+<a href="https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator">EPA Greenhouse gas equivalencies calculator</a>
+
+<script type="text/javascript" src="script2.js" defer=""></script>
+
+
+</div><div class="citizen-ex__pane" style=""></div></body></html>
