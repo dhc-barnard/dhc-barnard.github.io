@@ -7,8 +7,44 @@
   <title>forest</title>
   <style>
     body {
-      background: rgb(204, 204, 255);
-      background: radial-gradient(circle, rgba(204, 204, 255, 1) 0%, rgba(134, 94, 156, 1) 100%);
+      background-image: url('images/DHC-background.png');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* background: rgb(204, 204, 255);
+      background: radial-gradient(circle, rgba(204, 204, 255, 1) 0%, rgba(134, 94, 156, 1) 100%); */
+    }
+
+    #plant {
+      position: fixed;
+      top: 240px;
+      right: 0;
+      width: 250px;
+      z-index: 3;
+    }
+
+    #poster {
+      position: fixed;
+      top: 120px;
+      left: 625px;
+      width: 80px;
+      z-index: 2;
+    }
+
+    #screen {
+      position: fixed;
+      top: 200px;
+      left: 950px;
+      width: 280px;
+      z-index: 1;
+    }
+
+    #laptop {
+      position: fixed;
+      top: 390px;
+      left: 380px;
+      width: 180px;
+      z-index: 4;
     }
   </style>
 </head>
@@ -18,26 +54,25 @@
     Welcome to the Barnard DHC
   </p>
   <div id="calculator" class="room">
-    <p><a href="room.html">
-        <img src="blob.svg" alt="blob" width="200">
+    <p><a href="footprint-calculator.html">
+        <img src="images/plant.png" alt="plant with tall leaves and orange pot" id="plant">
       </a></p>
   </div>
   <div>
-    <p><a href="room1.html" class="room">
-        <img src="blob1.svg" alt="blob" width="200">
+    <p><a href="images/DHC-values_Poster.png" class="room">
+        <img src="images/DHC-values_Poster-sm.png" alt="blob" id="poster">
       </a></p>
   </div>
   <div>
     <p><a href="room2.html" class="room">
-        <img src="blob2.svg" alt="blob" width="200">
+        <img src="images/TV-Monitor.png" alt="tv screen" id="screen">
       </a></p>
   </div>
   <div>
-    <p><a href="room3.html" class="room">
-        <img src="blob3.svg" alt="blob" width="200">
+    <p><a href="dh-toolkit.html" class="room">
+        <img src="images/computer.svg" alt="laptop" id="laptop">
       </a></p>
   </div>
-
   <script src="script.js"></script>
 </body>
 
