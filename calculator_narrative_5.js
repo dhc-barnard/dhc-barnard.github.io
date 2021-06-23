@@ -286,16 +286,9 @@ function updateOutput() {
   // out_land_other.value = num27*20;
 
   // final outputs
-  out_carbon.value = (parseFloat(out_carbon_skype.value*0.001) + parseFloat(out_carbon_zoom.value*0.001)
-  + parseFloat(out_carbon_webex.value*0.001) + parseFloat(out_carbon_facetime.value*0.001) + parseFloat(out_carbon_googlehangout.value*0.001)
-  + parseFloat(out_carbon_googleduo.value*0.001)
-  ).toFixed(2);
-  out_water.value = (parseFloat(out_water_skype.value)
-  + parseFloat(out_water_zoom.value) + parseFloat(out_water_webex.value)
-  + parseFloat(out_water_facetime.value) + parseFloat(out_carbon_googlehangout.value)
-  + parseFloat(out_carbon_googleduo.value)).toFixed(2);
-  out_land.value = (parseFloat(out_land_skype.value)
-  + parseFloat(out_land_zoom.value) + parseFloat(out_land_webex.value)
-  + parseFloat(out_land_facetime.value) + parseFloat(out_carbon_googlehangout.value)
-  + parseFloat(out_carbon_googleduo.value)).toFixed(2);
+  out_carbon.value = (parseFloat(out_carbon_websurfing.value*0.001) + parseFloat(out_carbon_onlinegaming.value*0.001)).toFixed(2);
+  out_water.value = (parseFloat(out_water_websurfing.value)
+  + parseFloat(out_water_onlinegaming.value)).toFixed(2);
+  out_land.value = (parseFloat(out_land_websurfing.value)
+  + parseFloat(out_land_onlinegaming.value)).toFixed(2);
 }

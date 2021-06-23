@@ -149,7 +149,7 @@ function updateOutput() {
   var num2 = parseFloat(form.elements["Hulu"].value);
   var num3 = parseFloat(form.elements["Amazon"].value);
   var num4 = parseFloat(form.elements["Youtube"].value);
-  // var num5 = parseFloat(form.elements["Spotify"].value);
+  var num5 = parseFloat(form.elements["Spotify"].value);
   // var num6 = parseFloat(form.elements["Skype"].value);
   // var num7 = parseFloat(form.elements["Zoom"].value);
   // var num8 = parseFloat(form.elements["Webex"].value);
