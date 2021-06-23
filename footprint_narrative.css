@@ -363,13 +363,13 @@ body {
     .open-book .row {
         display: flex;
       }
-      
+
       /* Create two equal columns that sits next to each other */
     .open-book .column {
         flex: 50%;
         padding: 5px;
       }
-    
+
     .open-book .column > p {
         text-indent: 0em;
       }
@@ -388,7 +388,7 @@ body {
     .open-book #english {
         background-color:#e5e5e5;
       }
-    
+
       .open-book img {
           opacity: 0.6;
           display: block;

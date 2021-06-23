@@ -16,33 +16,66 @@
           <h6>Digital Humanities Center</h6>
         </header>
         <article>
-          <h2 class="chapter-title">Digital Carbon Footprint Inquiry</h2>
-          <p> Welcome to the Digital Carbon Footprint Inquiry. At the Barnard DHC, we are commited to sustainability. We
-            want to understanding harm to our environment not from the perspective of individual responsibility but by
-            <q>practicing on being in right relationship to our home and each other</q> (adrienne maree brown, 24). We
-            present this tool not to evaluate or critique the impacts of our digital use, but rather to learn and
-            inspire critical reflection and relationships that can get us closer to <q>the 'right relationship'</q>
-            width the natural world that adrienne maree brown describes with centering collaboration between ecosystems
-            and lifeforms.
-          </p>
+        <p>
+          In this digital age, social media has become a nearly essential way we connect with others. How much time do you
+          spend on social media?
+        </p>
+        <form id="calc" oninput="updateOutput()">
+        Digital Carbon Footprint: <output name="carbon" for="Netflix Hulu">0</output> kg<br><br>
+        Digital Water Footprint: <output name="water" for="Netflix Hulu">0</output> l<br><br>
+        Digital Land Footprint: <output name="land" for="Netflix Hulu">0</output> cm<sup>2</sup><br><br>
 
-          <p>How about the instances of natural networks that survive and grow despite our human impact? What can we
-            learn from these sustainable relationships and connections? Might we embody them and care for them? Working
-            within adrienne maree brown’s emergent strategy framework, we present this tool as a way to attend to the
-            small actions implicated in these larger networks and the change that is created by this interconnectedness
-          </p>
-          <br>
-          <p class="illustrated" id="mushroom"></p>
-
-          <br>
-
-          <p> </p>
-
-          <br>
-
-         <p>
-         </p>
-
+        <table>
+          <tbody><tr>
+            <th>Platform</th>
+            <th>Data (GB/hr)</th>
+            <th>Hours/day</th>
+            <th>Carbon (g)</th>
+            <th>Water (l)</th>
+            <th>Land (cm<sup>2</sup>)</th>
+          </tr>
+         <tr>
+        <table>
+          <tbody><tr>
+            <th>Platform</th>
+            <th>Data (GB/hr)</th>
+            <th>Hours/day</th>
+            <th>Carbon (g)</th>
+            <th>Water (l)</th>
+            <th>Land (cm<sup>2</sup>)</th>
+          </tr>
+          <tr>
+             <td><div class="platform_name">Facebook: </div></td>
+             <td>0.16</td>
+             <td><input name="Facebook" value="0" type="number" min="0" step="0.5"></td>
+             <td><output name="carbon_facebook" for="Facebook">0</output></td>
+             <td><output name="water_facebook" for="Facebook">0</output></td>
+             <td><output name="land_facebook" for="Facebook">0</output></td>
+           </tr>
+           <tr>
+              <td><div class="platform_name">Twitter: </div></td>
+              <td>0.36</td>
+              <td><input name="Twitter" value="0" type="number" min="0" step="0.5"></td>
+              <td><output name="carbon_twitter" for="Twitter">0</output></td>
+              <td><output name="water_twitter" for="Twitter">0</output></td>
+              <td><output name="land_twitter" for="Twitter">0</output></td>
+            </tr>
+            <tr>
+               <td><div class="platform_name">Instagram: </div></td>
+               <td>0.1</td>
+               <td><input name="Instagram" value="0" type="number" min="0" step="0.5"></td>
+               <td><output name="carbon_instagram" for="Instagram">0</output></td>
+               <td><output name="water_instagram" for="Instagram">0</output></td>
+               <td><output name="land_instagram" for="Instagram">0</output></td>
+             </tr>
+             <tr>
+                <td><div class="platform_name">Snapchat: </div></td>
+                <td>0.16</td>
+                <td><input name="Snapchat" value="0" type="number" min="0" step="0.5"></td>
+                <td><output name="carbon_snapchat" for="Snapchat">0</output></td>
+                <td><output name="water_snapchat" for="Snapchat">0</output></td>
+                <td><output name="land_snapchat" for="Snapchat">0</output></td>
+              </tr>
         </article>
         <footer>
           <ol id="page-numbers">
@@ -54,5 +87,5 @@
     </div>
   </div>
 </body>
-
+<script type="text/javascript" src="calculator_narrative.js" defer=""></script>
 </html>
