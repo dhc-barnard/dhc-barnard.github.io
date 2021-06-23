@@ -150,12 +150,12 @@ function updateOutput() {
   // var num3 = parseFloat(form.elements["Amazon"].value);
   // var num4 = parseFloat(form.elements["Youtube"].value);
   // var num5 = parseFloat(form.elements["Spotify"].value);
-  var num6 = parseFloat(form.elements["Skype"].value);
-  var num7 = parseFloat(form.elements["Zoom"].value);
-  var num8 = parseFloat(form.elements["Webex"].value);
-  var num9 = parseFloat(form.elements["FaceTime"].value);
-  var num10 = parseFloat(form.elements["GoogleHangout"].value);
-  var num11 = parseFloat(form.elements["GoogleDuo"].value);
+  // var num6 = parseFloat(form.elements["Skype"].value);
+  // var num7 = parseFloat(form.elements["Zoom"].value);
+  // var num8 = parseFloat(form.elements["Webex"].value);
+  // var num9 = parseFloat(form.elements["FaceTime"].value);
+  // var num10 = parseFloat(form.elements["GoogleHangout"].value);
+  // var num11 = parseFloat(form.elements["GoogleDuo"].value);
   // var num12 = parseFloat(form.elements["Facebook"].value);
   // var num13 = parseFloat(form.elements["Twitter"].value);
   // var num14 = parseFloat(form.elements["Instagram"].value);
@@ -163,8 +163,8 @@ function updateOutput() {
   // var num16 = parseFloat(form.elements["TikTok"].value);
   // var num17 = parseFloat(form.elements["WhatsApp"].value);
   // var num18 = parseFloat(form.elements["WeChat"].value);
-  // var num19 = parseFloat(form.elements["OnlineGaming"].value);
-  // var num20 = parseFloat(form.elements["WebSurfing"].value);
+  var num19 = parseFloat(form.elements["OnlineGaming"].value);
+  var num20 = parseFloat(form.elements["WebSurfing"].value);
   //
   // // replace all instances of parseFloat with parseInt if needing to force integers
   // var num21 = parseFloat(form.elements["google(personal)"].value);
@@ -196,29 +196,29 @@ function updateOutput() {
   // out_water_spotify.value = num5*1.399611174;
   // out_land_spotify.value = num5*0.799304372;
   //
-  out_carbon_skype.value = num6*117.0644153;
-  out_water_skype.value = num6*65.08191957;
-  out_land_skype.value = num6*37.16765332;
-
-  out_carbon_zoom.value = num7*157.3446443;
-  out_water_zoom.value = num7*87.47569835;
-  out_land_zoom.value = num7*49.95652328;
-
-  out_carbon_webex.value = num8*162.3796729;
-  out_water_webex.value = num8*90.2749207;
-  out_land_webex.value = num8*51.55513202;
-
-  out_carbon_facetime.value = num9*11.32881439;
-  out_water_facetime.value = num9*6.298250281;
-  out_land_facetime.value = num9*3.596869676;
-
-  out_carbon_googlehangout.value = num10*203.918659;
-  out_water_googlehangout.value = num10*113.3685051;
-  out_land_googlehangout.value = num10*64.74365416;
-
-  out_carbon_googleduo.value = num11*30.2101717;
-  out_water_googleduo.value = num11*16.79533408;
-  out_land_googleduo.value = num11*9.591652469;
+  // out_carbon_skype.value = num6*117.0644153;
+  // out_water_skype.value = num6*65.08191957;
+  // out_land_skype.value = num6*37.16765332;
+  //
+  // out_carbon_zoom.value = num7*157.3446443;
+  // out_water_zoom.value = num7*87.47569835;
+  // out_land_zoom.value = num7*49.95652328;
+  //
+  // out_carbon_webex.value = num8*162.3796729;
+  // out_water_webex.value = num8*90.2749207;
+  // out_land_webex.value = num8*51.55513202;
+  //
+  // out_carbon_facetime.value = num9*11.32881439;
+  // out_water_facetime.value = num9*6.298250281;
+  // out_land_facetime.value = num9*3.596869676;
+  //
+  // out_carbon_googlehangout.value = num10*203.918659;
+  // out_water_googlehangout.value = num10*113.3685051;
+  // out_land_googlehangout.value = num10*64.74365416;
+  //
+  // out_carbon_googleduo.value = num11*30.2101717;
+  // out_water_googleduo.value = num11*16.79533408;
+  // out_land_googleduo.value = num11*9.591652469;
 
   // out_carbon_facebook.value = num12*10.07005723;
   // out_water_facebook.value = num12*5.598444694;
@@ -248,13 +248,13 @@ function updateOutput() {
   // out_water_wechat.value = num18*3.848930727;
   // out_land_tiktok.value = num18*2.198087024;
   //
-  // out_carbon_onlinegaming.value = num19*18.88135731;
-  // out_water_onlinegaming.value = num19*10.4970838;
-  // out_land_onlinegaming.value = num19*5.994782793;
-  //
-  // out_carbon_websurfing.value = num20*9.440678657;
-  // out_water_websurfing.value = num20*5.248541901;
-  // out_land_websurfing.value = num20*2.997391397;
+  out_carbon_onlinegaming.value = num19*18.88135731;
+  out_water_onlinegaming.value = num19*10.4970838;
+  out_land_onlinegaming.value = num19*5.994782793;
+
+  out_carbon_websurfing.value = num20*9.440678657;
+  out_water_websurfing.value = num20*5.248541901;
+  out_land_websurfing.value = num20*2.997391397;
   //
   // // get storage values
   // out_carbon_googlepersonal.value = num21*62.93785771;

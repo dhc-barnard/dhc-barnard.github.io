@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="footprint_narrative.css">
+  <title>digital carbon footprint inquiry</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <section class="open-book">
+        <header>
+          <h1>Digital Carbon Footprint Inquiry</h1>
+          <h6>Digital Humanities Center</h6>
+        </header>
+        <article>
+        <p>
+          How about streaming services?
+        </p>
+        <form id="calc" oninput="updateOutput()">
+        Digital Carbon Footprint: <output name="carbon" for="Netflix Hulu">0</output> kg<br><br>
+        Digital Water Footprint: <output name="water" for="Netflix Hulu">0</output> l<br><br>
+        Digital Land Footprint: <output name="land" for="Netflix Hulu">0</output> cm<sup>2</sup><br><br>
+
+        <table>
+          <tbody><tr>
+            <th>Platform</th>
+            <th>Data (GB/hr)</th>
+            <th>Hours/day</th>
+            <th>Carbon (g)</th>
+            <th>Water (l)</th>
+            <th>Land (cm<sup>2</sup>)</th>
+          </tr>
+         <tr>
+        <table>
+          <tbody><tr>
+            <th>Platform</th>
+            <th>Data (GB/hr)</th>
+            <th>Hours/day</th>
+            <th>Carbon (g)</th>
+            <th>Water (l)</th>
+            <th>Land (cm<sup>2</sup>)</th>
+          </tr>
+          <tr>
+             <td><div class="platform_name">Online Gaming: </div></td>
+             <td>0.3</td>
+             <td><input name="OnlineGaming" value="0" type="number" min="0" step="0.5"></td>
+             <td><output name="carbon_onlinegaming" for="OnlineGaming">0</output></td>
+             <td><output name="water_onlinegaming" for="OnlineGaming">0</output></td>
+             <td><output name="land_onlinegaming" for="OnlineGaming">0</output></td>
+           </tr>
+           <tr>
+              <td><div class="platform_name">Web Surfing: </div></td>
+              <td>0.15</td>
+              <td><input name="WebSurfing" value="0" type="number" min="0" step="0.5"></td>
+              <td><output name="carbon_websurfing" for="WebSurfing">0</output></td>
+              <td><output name="water_websurfing" for="WebSurfing">0</output></td>
+              <td><output name="land_websurfing" for="WebSurfing">0</output></td>
+            </tr>
+        </article>
+        <footer>
+          <ol id="page-numbers">
+            <li></li>
+            <li><a href="footprint_narrative_6.html">Next Page</a></li>
+          </ol>
+        </footer>
+      </section>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="calculator_narrative_5.js" defer=""></script>
+</html>
