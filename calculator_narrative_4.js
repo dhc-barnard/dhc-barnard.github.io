@@ -150,16 +150,16 @@ function updateOutput() {
   // var num3 = parseFloat(form.elements["Amazon"].value);
   // var num4 = parseFloat(form.elements["Youtube"].value);
   // var num5 = parseFloat(form.elements["Spotify"].value);
-  // var num6 = parseFloat(form.elements["Skype"].value);
-  // var num7 = parseFloat(form.elements["Zoom"].value);
-  // var num8 = parseFloat(form.elements["Webex"].value);
-  // var num9 = parseFloat(form.elements["FaceTime"].value);
-  // var num10 = parseFloat(form.elements["GoogleHangout"].value);
-  // var num11 = parseFloat(form.elements["GoogleDuo"].value);
-  var num12 = parseFloat(form.elements["Facebook"].value);
-  var num13 = parseFloat(form.elements["Twitter"].value);
-  var num14 = parseFloat(form.elements["Instagram"].value);
-  var num15 = parseFloat(form.elements["Snapchat"].value);
+  var num6 = parseFloat(form.elements["Skype"].value);
+  var num7 = parseFloat(form.elements["Zoom"].value);
+  var num8 = parseFloat(form.elements["Webex"].value);
+  var num9 = parseFloat(form.elements["FaceTime"].value);
+  var num10 = parseFloat(form.elements["GoogleHangout"].value);
+  var num11 = parseFloat(form.elements["GoogleDuo"].value);
+  // var num12 = parseFloat(form.elements["Facebook"].value);
+  // var num13 = parseFloat(form.elements["Twitter"].value);
+  // var num14 = parseFloat(form.elements["Instagram"].value);
+  // var num15 = parseFloat(form.elements["Snapchat"].value);
   // var num16 = parseFloat(form.elements["TikTok"].value);
   // var num17 = parseFloat(form.elements["WhatsApp"].value);
   // var num18 = parseFloat(form.elements["WeChat"].value);
@@ -176,21 +176,21 @@ function updateOutput() {
   // var num27 = parseFloat(form.elements["other"].value);
 
   // get platform values
-  // out_carbon_netflix.value = num1*440.565004;
-  // out_water_netflix.value = num1*244.9319554;
-  // out_land_netflix.value = num1*139.8782652;
-  //
-  // out_carbon_hulu.value = num2*453.1525755;
-  // out_water_hulu.value = num2*251.9300112;
-  // out_land_hulu.value = num2*143.874787;
-  //
-  // out_carbon_amazon.value = num3*440.565004;
-  // out_water_amazon.value = num3*244.9319554;
-  // out_land_amazon.value = num3*139.8782652;
-  //
-  // out_carbon_youtube.value = num4*1005.746966;
-  // out_water_youtube.value = num4*559.1446639;
-  // out_land_youtube.value = num4*319.3220968;
+  out_carbon_netflix.value = num1*440.565004;
+  out_water_netflix.value = num1*244.9319554;
+  out_land_netflix.value = num1*139.8782652;
+
+  out_carbon_hulu.value = num2*453.1525755;
+  out_water_hulu.value = num2*251.9300112;
+  out_land_hulu.value = num2*143.874787;
+
+  out_carbon_amazon.value = num3*440.565004;
+  out_water_amazon.value = num3*244.9319554;
+  out_land_amazon.value = num3*139.8782652;
+
+  out_carbon_youtube.value = num4*1005.746966;
+  out_water_youtube.value = num4*559.1446639;
+  out_land_youtube.value = num4*319.3220968;
   //
   // out_carbon_spotify.value = num5*2.517514308
   // out_water_spotify.value = num5*1.399611174;
@@ -220,21 +220,21 @@ function updateOutput() {
   // out_water_googleduo.value = num11*16.79533408;
   // out_land_googleduo.value = num11*9.591652469;
 
-  out_carbon_facebook.value = num12*10.07005723;
-  out_water_facebook.value = num12*5.598444694;
-  out_land_facebook.value = num12*3.19721749;
-
-  out_carbon_twitter.value = num13*22.65762878;
-  out_water_twitter.value = num13*12.59650056;
-  out_land_twitter.value = num13*7.193739352;
-
-  out_carbon_instagram.value = num14*6.293785771;
-  out_water_instagram.value = num14*3.499027934;
-  out_land_instagram.value = num14*1.998260931;
-
-  out_carbon_snapchat.value = num15*10.07005723;
-  out_water_snapchat.value = num15*5.598444694;
-  out_land_snapchat.value = num15*3.19721749;
+  // out_carbon_facebook.value = num12*10.07005723;
+  // out_water_facebook.value = num12*5.598444694;
+  // out_land_facebook.value = num12*3.19721749;
+  //
+  // out_carbon_twitter.value = num13*22.65762878;
+  // out_water_twitter.value = num13*12.59650056;
+  // out_land_twitter.value = num13*7.193739352;
+  //
+  // out_carbon_instagram.value = num14*6.293785771;
+  // out_water_instagram.value = num14*3.499027934;
+  // out_land_instagram.value = num14*1.998260931;
+  //
+  // out_carbon_snapchat.value = num15*10.07005723;
+  // out_water_snapchat.value = num15*5.598444694;
+  // out_land_snapchat.value = num15*3.19721749;
 
   // out_carbon_tiktok.value = num16*88.11300079;
   // out_water_tiktok.value = num16*48.98639108;
@@ -288,45 +288,11 @@ function updateOutput() {
   // final outputs
   out_carbon.value = (parseFloat(out_carbon_netflix.value*0.001) + parseFloat(out_carbon_hulu.value*0.001)
   + parseFloat(out_carbon_amazon.value*0.001) + parseFloat(out_carbon_youtube.value*0.001)
-  + parseFloat(out_carbon_spotify.value*0.001) + parseFloat(out_carbon_skype.value*0.001)
-  + parseFloat(out_carbon_zoom.value*0.001)
-  + parseFloat(out_carbon_webex.value*0.001) + parseFloat(out_carbon_facetime.value*0.001)
-  + parseFloat(out_carbon_googlehangout.value*0.001) + parseFloat(out_carbon_googleduo.value*0.001)
-  + parseFloat(out_carbon_facebook.value*0.001) + parseFloat(out_carbon_twitter.value*0.001)
-  + parseFloat(out_carbon_instagram.value*0.001) + parseFloat(out_carbon_snapchat.value*0.001)
-  + parseFloat(out_carbon_tiktok.value*0.001) + parseFloat(out_carbon_whatsapp.value*0.001)
-  + parseFloat(out_carbon_wechat.value*0.001) + parseFloat(out_carbon_onlinegaming.value*0.001)
-  + parseFloat(out_carbon_websurfing.value*0.001)
-  + parseFloat(out_carbon_googlepersonal.value*0.001) + parseFloat(out_carbon_googlework.value*0.001)
-  + parseFloat(out_carbon_hotmail.value*0.001) + parseFloat(out_carbon_yahoo.value*0.001)
-  + parseFloat(out_carbon_dropbox.value*0.001) + parseFloat(out_carbon_box.value*0.001)
-  + parseFloat(out_carbon_other.value*0.001)).toFixed(2);
-  out_water.value = (parseFloat(out_water_netflix.value) + parseFloat(out_water_hulu.value)
-  + parseFloat(out_water_amazon.value) + parseFloat(out_water_youtube.value)
-  + parseFloat(out_water_spotify.value) + parseFloat(out_water_skype.value)
-  + parseFloat(out_water_zoom.value) + parseFloat(out_water_webex.value)
-  + parseFloat(out_water_facetime.value) + parseFloat(out_water_googlehangout.value)
-  + parseFloat(out_water_googleduo.value) + parseFloat(out_water_facebook.value)
-  + parseFloat(out_water_twitter.value) + parseFloat(out_water_instagram.value)
-  + parseFloat(out_water_snapchat.value) + parseFloat(out_water_tiktok.value)
-  + parseFloat(out_water_whatsapp.value) + parseFloat(out_water_wechat.value)
-  + parseFloat(out_water_onlinegaming.value) + parseFloat(out_water_websurfing.value)
-  + parseFloat(out_water_googlepersonal.value) + parseFloat(out_water_googlework.value)
-  + parseFloat(out_water_hotmail.value) + parseFloat(out_water_yahoo.value)
-  + parseFloat(out_water_dropbox.value) + parseFloat(out_water_box.value)
-  + parseFloat(out_water_other.value)).toFixed(2);
-  out_land.value = (parseFloat(out_land_netflix.value) + parseFloat(out_land_hulu.value)
-  + parseFloat(out_land_amazon.value) + parseFloat(out_land_youtube.value)
-  + parseFloat(out_land_spotify.value) + parseFloat(out_land_skype.value)
-  + parseFloat(out_land_zoom.value) + parseFloat(out_land_webex.value)
-  + parseFloat(out_land_facetime.value) + parseFloat(out_land_googlehangout.value)
-  + parseFloat(out_land_googleduo.value) + parseFloat(out_land_facebook.value)
-  + parseFloat(out_land_twitter.value) + parseFloat(out_land_instagram.value)
-  + parseFloat(out_land_snapchat.value) + parseFloat(out_land_tiktok.value)
-  + parseFloat(out_land_whatsapp.value) + parseFloat(out_land_wechat.value)
-  + parseFloat(out_land_onlinegaming.value) + parseFloat(out_land_websurfing.value)
-  + parseFloat(out_land_googlepersonal.value) + parseFloat(out_land_googlework.value)
-  + parseFloat(out_land_hotmail.value) + parseFloat(out_land_yahoo.value)
-  + parseFloat(out_land_dropbox.value) + parseFloat(out_land_box.value)
-  + parseFloat(out_land_other.value)).toFixed(2);
+  ).toFixed(2);
+  out_water.value = (parseFloat(out_water_netflix.value)
+  + parseFloat(out_water_hulu.value) + parseFloat(out_water_amazon.value)
+  + parseFloat(out_water_youtube.value)).toFixed(2);
+  out_land.value = (parseFloat(out_land_netflix.value)
+  + parseFloat(out_land_hulu.value) + parseFloat(out_land_amazon.value)
+  + parseFloat(out_land_youtube.value)).toFixed(2);
 }
