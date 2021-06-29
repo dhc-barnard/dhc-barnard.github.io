@@ -2,24 +2,25 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link rel="stylesheet" href="style.css">
   <title>DHC homepage</title>
   <style>
     body {
       background-image: url('images/DHC-background-FINAL.png');
+      background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      background-position: center;
+      position: relative;
       /* background: rgb(204, 204, 255);
       background: radial-gradient(circle, rgba(204, 204, 255, 1) 0%, rgba(134, 94, 156, 1) 100%); */
     }
 
     #screen {
-      position: fixed;
-      top: 200px;
-      left: 950px;
-      width: 280px;
+      position: absolute;
+      top: 190px;
+      left: 945px;
+      width: 210px;
       z-index: 1;
     }
 
@@ -33,16 +34,16 @@
 
     #poster {
       position: fixed;
-      top: 120px;
-      left: 625px;
-      width: 80px;
+      top: 170px;
+      left: 735px;
+      width: 48px;
       z-index: 3;
     }
 
     #plant {
       position: fixed;
-      top: 300px;
-      right: 0;
+      top: 155px;
+      left: 1315px;
       width: 180px;
       z-index: 4;
     }
@@ -50,18 +51,39 @@
 
     #laptop {
       position: fixed;
-      top: 390px;
+      top: 330px;
       left: 380px;
-      width: 180px;
+      width: 130px;
       z-index: 5;
     }
 
     #recycle {
       position: fixed;
-      top: 328px;
+      top: 500px;
       left: 725px;
-      width: 90px;
+      width: 100px;
       z-index: 6;
+    }
+    /* Main site body */
+    .wrapper {
+        width: 940px;
+        margin: 0 auto;
+        position: relative; /* Ensure absolute positioned child elements are relative to this*/
+    }
+
+    /* Absolute positioned wrapper for the element you want to fix position */
+    .fixed-wrapper {
+        width: 220px;
+        position: absolute;
+        top: 0;
+        left: -240px; /* Move this out to the left of the site body, leaving a 20px gutter */
+    }
+
+    /* The element you want to fix the position of */
+    .fixed {
+        width: 220px;
+        position: fixed;
+        /* Do not set top / left! */
     }
   </style>
 </head>
@@ -70,6 +92,7 @@
   <p style="color:white; font-family:verdana;">
     Welcome to the Barnard DHC
   </p>
+
   <div id="calculator" class="room">
     <p><a href="footprint-calculator.html">
         <img src="images/Plant.png" alt="plant with tall leaves and orange pot" id="plant">
